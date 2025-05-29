@@ -1,0 +1,437 @@
+/* style.css - Custom CSS for Career Portfolio Website */
+
+/* General Styling and Layout
+   -------------------------------------------------------------------
+   This section defines base styles for the body, containers, and
+   ensures a consistent font throughout the website.
+*/
+body {
+    font-family: 'Inter', sans-serif; /* Using the Inter font from Google Fonts */
+    background-color: #f0f4f8; /* A soft, light blue-gray background */
+    color: #334155; /* A dark slate gray for main text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability for paragraphs */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the footer sticks to the bottom of the viewport */
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+}
+
+/* Global container for content alignment */
+.container {
+    max-width: 1200px; /* Maximum width for the main content area */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+    box-sizing: border-box;
+}
+
+/* Header Styling
+   -------------------------------------------------------------------
+   Styles for the top navigation bar, site title, and navigation links.
+   Uses a gradient background for a modern look.
+*/
+.header-layout {
+    background: linear-gradient(to right, #2563eb, #7c3aed); /* Blue to Purple gradient */
+    color: #ffffff; /* White text for contrast */
+    padding: 24px; /* Padding around header content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    border-bottom-left-radius: 15px; /* Rounded corners at the bottom */
+    border-bottom-right-radius: 15px;
+    position: sticky; /* Makes the header stick to the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures header stays on top of other content */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Center text for mobile */
+}
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row; /* Arrange items horizontally on larger screens */
+        text-align: left; /* Align text to left for desktop */
+    }
+}
+
+.site-title {
+    font-size: 36px; /* Larger font size for the main title */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 15px; /* Space below title on mobile */
+    letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+}
+
+@media (min-width: 768px) {
+    .site-title {
+        margin-bottom: 0; /* Remove bottom margin on desktop */
+    }
+}
+
+/* Navigation Menu Styling */
+.main-nav {
+    /* No specific styles needed here, handled by .nav-list */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Space between navigation items */
+    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+    justify-content: center; /* Center navigation items */
+}
+
+.nav-link {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Semi-bold font weight */
+    padding: 8px 12px; /* Padding for click area */
+    border-radius: 8px; /* Slightly rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background on hover */
+    color: #e0e7ff; /* Lighter blue on hover */
+}
+
+/* Main Content Area
+   -------------------------------------------------------------------
+   General styling for the main content section of each page.
+*/
+.main-content {
+    padding: 40px 20px; /* More vertical padding for main content */
+    flex-grow: 1; /* Allows main content to expand and push footer down */
+}
+
+/* Section Card Styling
+   -------------------------------------------------------------------
+   Styles for individual content blocks (sections) on the pages.
+*/
+.section-card {
+    background-color: #ffffff; /* White background for content cards */
+    padding: 40px; /* Generous padding inside cards */
+    border-radius: 15px; /* Rounded corners for cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* More pronounced shadow for cards */
+    margin-bottom: 30px; /* Space between cards */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.section-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.section-title {
+    font-size: 44px; /* Large title for sections */
+    font-weight: 800; /* Extra bold font weight */
+    text-align: center;
+    color: #1a202c; /* Very dark gray for titles */
+    margin-bottom: 25px; /* Space below title */
+    letter-spacing: -1px; /* Tighter letter spacing for titles */
+}
+
+.section-subtitle {
+    font-size: 32px; /* Slightly smaller subtitle for sections */
+    font-weight: 700; /* Bold font weight */
+    color: #2d3748; /* Dark gray for subtitles */
+    margin-bottom: 20px; /* Space below subtitle */
+}
+
+.section-paragraph {
+    font-size: 18px; /* Slightly larger paragraph text */
+    color: #4a5568; /* Medium dark gray for paragraphs */
+    margin-bottom: 18px; /* Space between paragraphs */
+    line-height: 1.7; /* Improved line height for readability */
+}
+
+/* Button Styling
+   -------------------------------------------------------------------
+   Styles for primary call-to-action buttons.
+*/
+.text-center-wrapper {
+    text-align: center;
+    margin-top: 30px; /* Space above the button */
+}
+
+.button-primary {
+    display: inline-block;
+    background: linear-gradient(to right, #3b82f6, #6366f1); /* Blue to Indigo gradient for button */
+    color: #ffffff; /* White text */
+    font-weight: 700; /* Bold font */
+    padding: 14px 28px; /* Generous padding for a clickable area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border: none; /* No border */
+    cursor: pointer; /* Indicate clickable element */
+}
+
+.button-primary:hover {
+    background: linear-gradient(to right, #2563eb, #5a5ee0); /* Darker gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+/* Grid Layouts
+   -------------------------------------------------------------------
+   Flexible grid system for content blocks (e.g., skills, interests, goals).
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on small screens */
+    gap: 25px; /* Space between grid items */
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+/* Specific for three-column layouts (e.g., on Future Plans page) */
+.grid-container.three-cols {
+    grid-template-columns: 1fr; /* Default to single column on small screens */
+}
+
+/* Media query for large screens (e.g., desktops) for three columns */
+@media (min-width: 1024px) {
+    .grid-container.three-cols {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    }
+}
+
+.grid-item {
+    background-color: #fdfdfe; /* Very light background for grid items */
+    padding: 25px; /* Padding inside grid items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.grid-item:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.grid-item-title {
+    font-size: 24px; /* Title for grid items */
+    font-weight: 600; /* Semi-bold */
+    color: #2d3748; /* Dark gray */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.grid-item-paragraph {
+    color: #4a5568; /* Medium dark gray */
+    font-size: 16px; /* Standard paragraph size */
+}
+
+/* Skill List Styling
+   -------------------------------------------------------------------
+   Styles for unordered lists used for skills and goals.
+*/
+.skill-list {
+    list-style: disc; /* Bullet points */
+    list-style-position: inside; /* Bullets inside the text flow */
+    color: #4a5568; /* Medium dark gray */
+    line-height: 1.6;
+    padding-left: 0; /* Remove default padding */
+}
+
+.skill-list li {
+    margin-bottom: 8px; /* Space between list items */
+    font-size: 16px;
+}
+
+/* About Me Page Specific Styling (Profile Photo)
+   -------------------------------------------------------------------
+   Styles for the profile photo and its positioning.
+*/
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center; /* Center items horizontally */
+    gap: 30px; /* Space between image and text */
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Arrange horizontally on larger screens */
+        align-items: flex-start; /* Align items to the top */
+    }
+}
+
+.profile-photo {
+    width: 200px; /* Fixed width for the photo */
+    height: 200px; /* Fixed height for the photo */
+    border-radius: 50%; /* Makes the image perfectly circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Strong shadow for the photo */
+    border: 5px solid #ffffff; /* White border around the photo */
+    margin-bottom: 20px; /* Space below photo on mobile */
+    flex-shrink: 0; /* Prevents photo from shrinking in flex container */
+}
+
+@media (min-width: 768px) {
+    .profile-photo {
+        margin-bottom: 0; /* Remove bottom margin on desktop */
+    }
+}
+
+/* Image positioning classes (for floating) */
+.image-left {
+    float: left;
+    margin-right: 30px; /* Space to the right of the image */
+}
+
+.image-right {
+    float: right;
+    margin-left: 30px; /* Space to the left of the image */
+}
+
+/* Clearfix for floated images to ensure content flows correctly */
+.about-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer Styling
+   -------------------------------------------------------------------
+   Styles for the bottom section of the website.
+*/
+.footer-layout {
+    background-color: #2d3748; /* Darker gray for the footer */
+    color: #cbd5e1; /* Light gray text */
+    padding: 20px; /* Padding inside the footer */
+    margin-top: auto; /* Pushes the footer to the bottom */
+    border-top-left-radius: 15px; /* Rounded corners at the top */
+    border-top-right-radius: 15px;
+    text-align: center;
+}
+
+.footer-content {
+    /* No specific styling needed here, handled by .footer-layout */
+}
+
+.footer-links {
+    margin-top: 10px; /* Space above links */
+    font-size: 1.1em; /* Make "Connect with me" text larger */
+}
+
+.footer-link {
+    color: #63b3ed; /* Light blue for footer links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #90cdf4; /* Lighter blue on hover */
+}
+
+/* Social media icon specific styling */
+.social-icon i {
+    font-size: 1.8em; /* Make icons larger */
+    margin: 0 8px; /* Add some spacing between icons */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon i:hover {
+    color: #ffffff; /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Form Specific Styling */
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #fdfdfe;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #334155;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    outline: none;
+}
+
+textarea.form-control {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+/* Hero Image Styling */
+.hero-image-wrapper {
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 30px; /* Space below the image */
+}
+
+.hero-image {
+    width: 250px; /* Set a fixed smaller width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make it a block element to apply margin: auto for centering */
+    margin: 0 auto; /* Center the image itself within its wrapper */
+    border-radius: 15px; /* Slightly rounded corners for the image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+
+/* Responsive Adjustments (if needed, though flex/grid handle most)
+   -------------------------------------------------------------------
+   Additional media queries for fine-tuning on very small screens.
+*/
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 28px;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .section-subtitle {
+        font-size: 26px;
+    }
+    .section-card {
+        padding: 25px;
+    }
+    .button-primary {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    .footer-links {
+        font-size: 1em; /* Adjust for smaller screens if needed */
+    }
+    .social-icon i {
+        font-size: 1.5em; /* Adjust icon size for smaller screens if needed */
+    }
+}

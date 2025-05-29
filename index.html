@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="body-layout">
+    <header class="header-layout">
+        <div class="container header-content">
+            <h1 class="site-title">Michael V</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="Future Plans.html" class="nav-link">Future Plans</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="hero-image-wrapper">
+            <img src="my_design.jpg" alt="Michael Velasco's Portfolio Design" class="hero-image">
+        </div>
+
+        <section class="section-card">
+            <h2 class="section-title">Welcome to My Portfolio!</h2>
+            <p class="section-paragraph">
+                Hey there! Here is my website where you can learn about information regarding my life such as my interests, general information, and my career/future plans.
+            </p>
+            <p class="section-paragraph">
+                Feel free to take a gander at the various pages to learn about what drives me, my background, and the thrilling career pathways I am seeking.
+            </p>
+            <div class="text-center-wrapper">
+                <a href="about.html" class="button-primary">
+                    Learn More About Me
+                </a>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h3 class="section-subtitle">My Journey and Passions</h3>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h4 class="grid-item-title">Who I Am</h4>
+                    <p class="grid-item-paragraph">
+                        I am an individual with a passion in Technology, I desire to become a software developer that can do any development but my most passionate type of development would be Game Development.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <h4 class="grid-item-title">What I'm Exploring</h4>
+                    <p class="grid-item-paragraph">
+                        Currently, I am deeply exploring opportunities in Software Development for the future. I'm particularly fascinated by Game Development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="section-title">Send Me Your Feedback!</h2>
+            <form action="ThankYou.php" method="post" class="feedback-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="user_name" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="user_email" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="user_feedback" rows="5" required class="form-control"></textarea>
+                </div>
+                <div class="text-center-wrapper">
+                    <button type="submit" class="button-primary">Submit Feedback</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-layout">
+        <div class="container footer-content">
+            <p>&copy; 2025 Michael. All rights reserved.</p>
+            <p class="footer-links">Connect with me:
+                <a href="https://twitter.com/" target="_blank" class="footer-link social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" class="footer-link social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="footer-link social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
